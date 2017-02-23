@@ -16,5 +16,14 @@ public partial class Registre : System.Web.UI.Page
     {
         String mensaje;
         mensaje = ORM.AltaUsuari(TextBoxNomUsuari.Text, TextBoxContrasenya.Text, TextBoxEmail.Text);
+        netejarDades();
+    }
+
+    private void netejarDades()
+    {
+        TextBoxEmail.Text = "";
+        TextBoxNomUsuari.Text = "";
+        TextBoxContrasenya.Text = "";
+        TextBoxConfirmarContrasenya.Text = "";
     }
 }

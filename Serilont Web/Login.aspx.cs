@@ -47,4 +47,10 @@ public partial class Login : System.Web.UI.Page
 
         p.Visible = true;
     }
+
+    private void netejarDades()
+    {
+        TextBoxNomUsuari.Text = "";
+        TextBoxContrasenya.Text = "";
+    }
 }
