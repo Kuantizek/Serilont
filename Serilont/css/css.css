@@ -1,0 +1,18 @@
+body {
+	margin-left:25px;
+	margin-right:25px;
+}
+
+.primerPanel{
+    margin-top:200px;
+}
+
+.labelsError {
+    display:inline-block;
+    margin-left:10px;
+    color:red;
+}
+
+.logo {
+    margin-right: 17px;
+}
