@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,8 +15,17 @@ public partial class Registre : System.Web.UI.Page
     protected void ButtonRegistre_Click(object sender, EventArgs e)
     {
         String mensaje;
-        mensaje = ORM.AltaUsuari(TextBoxNomUsuari.Text, TextBoxContrasenya.Text, TextBoxEmail.Text);
-        netejarDades();
+        String where = "";
+        if (where == "it.username like'%" + TextBoxNomUsuari.Text + "%' && it.email like'%" + TextBoxEmail.Text + "%'")
+        {
+            
+            where = "it.username like'%" + TextBoxNomUsuari.Text + "%' && it.email like'%" + TextBoxEmail.Text + "%'";
+            EntityDataSourceUsuaris.Where = where;
+        }
+        else {
+            mensaje = ORM.AltaUsuari(TextBoxNomUsuari.Text, TextBoxContrasenya.Text, TextBoxEmail.Text);
+            netejarDades();
+        }
     }
 
     private void netejarDades()
@@ -26,4 +35,5 @@ public partial class Registre : System.Web.UI.Page
         TextBoxContrasenya.Text = "";
         TextBoxConfirmarContrasenya.Text = "";
     }
+
 }

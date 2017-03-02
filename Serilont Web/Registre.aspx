@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderContingut" Runat="Server">
-<asp:Panel ID="PanelRegistre" runat="server" CssClass="primerPanel">
+    <asp:Panel ID="PanelRegistre" runat="server" CssClass="primerPanel">
+        <asp:EntityDataSource ID="EntityDataSourceUsuaris" runat="server" ConnectionString="name=serilontEntities" DefaultContainerName="serilontEntities" EnableFlattening="False" EntitySetName="Usuaris"></asp:EntityDataSource>
         <asp:Label ID="LabelEmail" runat="server" Text="Correu Electrònic*"></asp:Label>
         <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
         <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="ERROR: No has introduït un correu electrònic vàlid." SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="labelsError"></asp:RegularExpressionValidator >
